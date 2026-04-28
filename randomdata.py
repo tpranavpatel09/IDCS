@@ -1,7 +1,7 @@
 import random
 import pandas as pd
 
-NUM_DOCS = 1000
+NUM_DOCS = 10000
 labels = {
     "Equity Research": [
         "equity", "stocks", "earnings", "valuation", "analyst",
@@ -63,7 +63,7 @@ for label, keywords in labels.items():
 
 df = pd.DataFrame(data)
 df = df.sample(frac=1, random_state=42).reset_index(drop=True)
-output_path = "investment_documents_1000.csv"
+output_path = "investment_documents_10000.csv"
 df.to_csv(output_path, index=False)
 print(f"Dataset saved to {output_path}")
 print(df.head())

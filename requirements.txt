@@ -1,0 +1,13 @@
+pandas
+scikit-learn
+spacy
+joblib
+fastapi
+uvicorn
+pydantic
+mlflow
+langchain
+transformers
+sentence-transformers
+faiss-cpu
+xgboost
