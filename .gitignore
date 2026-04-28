@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .env
+.venv/
+server.log
+uvicorn.out.log
+uvicorn.err.log

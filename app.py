@@ -28,6 +28,12 @@ app = FastAPI(
 )
 
 
+@app.on_event("startup")
+def ensure_models_available() -> None:
+    if not TAGGER_PATH.exists() or not RETRIEVER_PATH.exists() or not RISK_MODEL_PATH.exists():
+        train_all()
+
+
 class QueryRequest(BaseModel):
     question: str
     top_k: int = Field(default=5, ge=1, le=20)
